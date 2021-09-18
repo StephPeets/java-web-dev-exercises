@@ -14,6 +14,6 @@ public class TempConverter {
         input.close();
 
         celsius = (fahrenheit - 32) * 5/9;
-        System.out.println("The temperature in Celsius is: " + celsius + "°C");
+        System.out.println("The temperature in Celsius is: " + celsius + "\u00B0C");
     }
 }
