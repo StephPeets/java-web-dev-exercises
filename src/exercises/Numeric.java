@@ -8,11 +8,16 @@ public class Numeric {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Rectangle Length:  ");
+        System.out.println("Rectangle Length:  ");
 
-        String length = input.nextLine();
+        double recLength = input.nextDouble();
 
-        System.out.println("Rectangle Length:  " + length);
+        System.out.println("Rectangle Width:  ");
 
+        double recWidth = input.nextDouble();
+
+        double recArea = recLength * recWidth;
+
+        System.out.printf("Rectangle\n\tLength: %s\n\tWidth: %s\n\tArea: %s", recLength, recWidth, recArea);
     }
 }
