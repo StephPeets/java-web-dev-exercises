@@ -12,6 +12,6 @@ public class HelloWorld {
 
         String name = input.nextLine();
 
-        System.out.println("Hello " + name);
+        System.out.println("Hello" + name);
     }
 }
