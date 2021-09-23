@@ -29,6 +29,7 @@ public class ArrayListGradebook {
             System.out.print("Grade for " + student + ": ");
             Double grade = input.nextDouble();
             grades.add(grade);
+            input.close();
         }
 
         // Print class roster

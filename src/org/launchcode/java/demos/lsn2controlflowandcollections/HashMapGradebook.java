@@ -27,6 +27,7 @@ public class HashMapGradebook {
 
                 // Read in the newline before looping back
                 input.nextLine();
+                input.close();
             }
 
         } while(!newStudent.equals(""));

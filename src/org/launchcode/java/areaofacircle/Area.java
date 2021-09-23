@@ -1,4 +1,4 @@
-package org.launchcode.java.studios.areaofacircle;
+package org.launchcode.java.areaofacircle;
 
 import java.util.Scanner;
 
@@ -41,6 +41,7 @@ public class Area {
                 r = input.nextDouble();
                 if (r <= 0) {
                     System.out.println("Please choose a positive number");
+                    input.close();
                 }
             } else {
                 String stringValue = input.next();

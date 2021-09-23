@@ -16,6 +16,8 @@ public class NumericTypes {
 
         double gasUsed = input.nextDouble();
 
+        input.close();
+
         double milesPerGallon = milesDriven / gasUsed;
 
         System.out.printf("Miles driven: %s\nGallons of gas: %s\n\tMiles per gallon: %s", milesDriven, gasUsed, milesPerGallon);

@@ -16,6 +16,8 @@ public class Numeric {
 
         double recWidth = input.nextDouble();
 
+        input.close();
+
         double recArea = recLength * recWidth;
 
         System.out.printf("Rectangle\n\tLength: %s\n\tWidth: %s\n\tArea: %s", recLength, recWidth, recArea);

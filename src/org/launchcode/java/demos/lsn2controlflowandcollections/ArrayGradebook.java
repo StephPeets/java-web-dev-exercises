@@ -34,6 +34,7 @@ public class ArrayGradebook {
             System.out.print("Grade for " + students[i] + ": ");
             double grade = input.nextDouble();
             grades[i] = grade;
+            input.close();
         }
 
         // Print class roster

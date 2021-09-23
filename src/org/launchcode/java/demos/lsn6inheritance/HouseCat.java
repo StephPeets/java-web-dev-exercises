@@ -9,6 +9,14 @@ public class HouseCat extends Cat {
         name = aName;
     }
 
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+
     public boolean isSatisfied() {
         return !isHungry() && !isTired();
     }
