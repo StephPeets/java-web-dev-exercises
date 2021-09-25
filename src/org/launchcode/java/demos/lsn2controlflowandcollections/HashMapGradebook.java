@@ -3,6 +3,7 @@ package org.launchcode.java.demos.lsn2controlflowandcollections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 public class HashMapGradebook {
 
@@ -29,16 +30,24 @@ public class HashMapGradebook {
     } while (!newStudent.equals(""));
 
     // Print class roster
-    System.out.println("\nClass roster:");
+    System.out.println("\n*************");
+    System.out.println("Class roster:");
+
     double sum = 0.0;
 
     for (Map.Entry<String, Double> student : students.entrySet()) {
       System.out.println(student.getKey() + " (" + student.getValue() + ")");
       sum += student.getValue();
     }
-
+		input.close();
     double avg = sum / students.size();
+
     System.out.println("Average grade: " + avg);
-    input.close();
+    System.out.println("*************\n");
+    Set<String> keySet = students.keySet();
+
+		System.out.println(students);
+		System.out.println(keySet);
+		System.out.println(students);
   }
 }
