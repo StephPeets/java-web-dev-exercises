@@ -5,27 +5,28 @@ import java.util.Arrays;
 public class Ex371ArrayPractice {
 
   public static void main(String[] args) {
-    int[] arr371 = new int[6];
+    int[] arrayOne = new int[6];
 
-    arr371[0] = 1;
-    arr371[1] = 1;
-    arr371[2] = 2;
-    arr371[3] = 3;
-    arr371[4] = 5;
-    arr371[5] = 8;
+    arrayOne[0] = 1;
+    arrayOne[1] = 1;
+    arrayOne[2] = 2;
+    arrayOne[3] = 3;
+    arrayOne[4] = 5;
+    arrayOne[5] = 8;
 
-    int[] arr3711 = { 1, 1, 2, 3, 5, 8 };
+    System.out.println(Arrays.toString(arrayOne));
 
-    for (int num : arr371) {
-      System.out.println(num);
+    for (int num : arrayOne) {
+      if (num % 2 != 0) {
+        System.out.println(num);
+      }
     }
+    // int[] arrayInputAsSet = { 1, 1, 2, 3, 5, 8 };
 
-    System.out.println(Arrays.toString(arr371));
-    
-    System.out.println(Arrays.toString(arr3711));
+    // justOddNums(arrayOne);
 
-    System.out.println(arr371.length);
+    // System.out.println(Arrays.toString(arrayInputAsSet));
 
-    System.out.println(arr371.length);
+    // System.out.println(arrayOne.length);
   }
 }
