@@ -1,4 +1,4 @@
-package exercises;
+package exercises.ch3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,7 +47,7 @@ public class Ex372ArrayListPractice {
   public static void main(String[] args) {
     
 
-    String practiceString = exercises.Ex3713SplitArray.saucy;
+    String practiceString = exercises.ch3.Ex3713SplitArray.saucy;
 
     String splitStr[] = practiceString.split(" ");
     ArrayList<String> stringToAL = new ArrayList<String>(Arrays.asList(splitStr));
