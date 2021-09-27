@@ -28,7 +28,7 @@ public class countingCharacters {
     System.out.println("Enter a phrase: ");
 
     String userString = input.nextLine();
-    
+    input.close();
     userString = userString.toLowerCase();
 
     userString = userString.replaceAll("[^a-z]", "");
