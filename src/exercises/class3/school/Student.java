@@ -10,6 +10,11 @@ public class Student {
     private int numberOfCredits = 0;
     private double gpa = 0.0;
 
+    public Student(String name, int studentId, double gpa){
+        this.gpa = gpa;
+        this.studentId = studentId;
+    }
+
     public void setName(String aName) {
         this.name = aName;
     }
@@ -23,7 +28,7 @@ public class Student {
     }
 
     public void setGpa(Double aGpa) {
-        gpa = aGpa;
+        this.gpa = aGpa;
     }
 
     public int getStudentId() {
@@ -44,14 +49,13 @@ public class Student {
 
     public static void main(String[] args) {
 
-        Student steph = new Student();
-
-        steph.setName("Steph");
-        steph.setStudentId(123456);
-        steph.setNumberOfCredits(1);
-        steph.setGpa(4.0);
-
+        Student steph = new Student("Steph", 123456, 4.0);
+        steph.setNumberOfCredits(5);
+        steph.gpa = 2.0;
+        // steph.numberOfCredits = 2;
+        // steph.name = "john";
         System.out.println(steph.getNumberOfCredits());
+        System.out.println(steph.getName());
 
     }
 }
