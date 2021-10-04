@@ -13,6 +13,14 @@ public class Menu {
     this.menuItems = menuItems;
   }
 
+  public Date getLastUpdated() {
+    return this.lastUpdated;
+  }
+
+  public void setLastUpdated(Date lastUpdated) {
+    this.lastUpdated = lastUpdated;
+  }
+
   public ArrayList<MenuItems> getMenuItems(){
     return menuItems;
   };
