@@ -1,6 +1,7 @@
 package exercises.class4.school;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Course {
 
@@ -39,6 +40,32 @@ public class Course {
 
   public void setTeacher(Teacher teacher) {
     this.teacher = teacher;
+  }
+
+  @Override
+  public String toString() {
+    return "{" +
+      " courseTitle='" + getCourseTitle() + "'" +
+      ", averageGpa='" + getAverageGpa() + "'" +
+      ", teacher='" + getTeacher() + "'" +
+      ", students='" + getStudents() + "'" +
+      "}";
+  }
+
+  @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Course)) {
+            return false;
+        }
+        Course course = (Course) o;
+        return Objects.equals(courseTitle, course.courseTitle) && Objects.equals(averageGpa, course.averageGpa) && Objects.equals(teacher, course.teacher) && Objects.equals(students, course.students);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(courseTitle, averageGpa, teacher, students);
   }
 
   public static void main(String[] args) {

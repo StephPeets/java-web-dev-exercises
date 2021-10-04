@@ -7,27 +7,10 @@ import java.util.Objects;
 
 public class Student {
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this)
-            return true;
-        if (!(obj instanceof Student)) {
-            return false;
-        }
-        Student student = (Student) obj;
-        return Objects.equals(name, student.name) && studentId == student.studentId && numberOfCredits == student.numberOfCredits && gpa == student.gpa;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, studentId, numberOfCredits, gpa);
-    }
-
     private String name;
     private int studentId;
     private int numberOfCredits = 0;
     private double gpa = 0.0;
-
 
     public Student(String name, int studentId, int numberOfCredits, double gpa) {
         this.name = name;
@@ -68,11 +51,37 @@ public class Student {
         this.gpa = gpa;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this)
+            return true;
+        if (!(obj instanceof Student))
+            return false;
+
+        Student student = (Student) obj;
+        return Objects.equals(name, student.name) && studentId == student.studentId
+                && numberOfCredits == student.numberOfCredits && gpa == student.gpa;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, studentId, numberOfCredits, gpa);
+    }
+
+    @Override
+    public String toString() {
+        String credits = this.numberOfCredits == 1 ? "credit" : "credits";
+
+        String studentReport = String.format("%s is a %s with %d %s and a GPA of %.2f", this.name, this.getGradeLevel(),
+                this.getNumberOfCredits(), credits, this.getGpa());
+
+        return studentReport;
+    }
+
     public String getGradeLevel() {
-        
+
         String gradeLevel = 
-        numberOfCredits < 0 ? "Please enter valid number of credits." :
-        numberOfCredits <= 29 ? "Freshman" : 
+        numberOfCredits < 0 ? "Please enter valid number of credits." : numberOfCredits <= 29 ? "Freshman" : 
         numberOfCredits <= 59 ? "Sophomore" : 
         numberOfCredits <= 89 ? "Junior" : 
         "Senior";
@@ -80,20 +89,26 @@ public class Student {
         return gradeLevel;
     }
 
+    public void addGrade(double classGrade, int classCredits) {
+        double initialQualityScore = this.getGpa() * this.getNumberOfCredits();
+        double qualityScore = classGrade * classCredits;
+        double totalQualityScore = initialQualityScore + qualityScore;
+        double totalCredits = this.getNumberOfCredits() + classCredits;
+        double newGpa = totalQualityScore / totalCredits;
+        this.setGpa(newGpa);
+        this.setNumberOfCredits(classCredits);
+
+    }
+
     public static void main(String[] args) {
 
         Student steph = new Student("Steph", 123456, 1, 4.0);
         Student steph2 = new Student("Steph", 123456, 2, 4.0);
-            
-        String thisString = "this string";
-        String nextString = "this string";
 
-        System.out.println((steph.name).equals(steph2.name));
-        System.out.println((steph).equals(steph2));
-        // steph.setNumberOfCredits(5);
-        // steph.gpa = 2;
-        System.out.println(steph.getNumberOfCredits());
-        System.out.println(steph.getGradeLevel());
+        System.out.println(steph2.getNumberOfCredits());
+        System.out.println(steph2);
+        steph2.addGrade(2.0, 4);
+        System.out.println(steph2);
 
     }
 }
