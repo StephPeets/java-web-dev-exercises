@@ -1,4 +1,4 @@
-package org.launchcode.java.class3studio;
+package org.launchcode.java.class4studio;
 
 import java.util.Date;
 import java.util.ArrayList;
@@ -17,8 +17,8 @@ public class Menu {
     return this.lastUpdated;
   }
 
-  public void setLastUpdated(Date lastUpdated) {
-    this.lastUpdated = lastUpdated;
+  public void setLastUpdated() {
+    this.lastUpdated = new Date();
   }
 
   public ArrayList<MenuItems> getMenuItems(){

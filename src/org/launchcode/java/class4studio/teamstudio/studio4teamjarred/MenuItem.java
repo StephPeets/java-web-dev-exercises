@@ -1,4 +1,4 @@
-package org.launchcode.java.class4studio.jarredmenu.company;
+package org.launchcode.java.class4studio.teamstudio.studio4teamjarred;
 import java.util.Date;
 import java.util.Objects;
 
@@ -15,7 +15,6 @@ public class MenuItem {
         this.description = description;
         this.price = price;
         this.dateAdded = new Date();
-
     }
 
     public MenuItem(){
@@ -34,10 +33,12 @@ public class MenuItem {
     }
 
     public String simpleMenuItem() {
-        return
-            getName() + " $" + getPrice() + "\n" +
-            getDescription() + "\n";
-            // text literals
+        
+         String menuItemAndPrice = 
+            this.getName() + "\n" + 
+            this.getPrice() + "\n";
+        
+        return menuItemAndPrice;
     }
     
 
@@ -82,4 +83,6 @@ public class MenuItem {
     public void setPrice(Double aPrice){
         this.price = aPrice;
     }
+
+
 }

@@ -1,4 +1,4 @@
-package org.launchcode.java.class3studio;
+package org.launchcode.java.class4studio;
 
 import java.util.Date;
 
