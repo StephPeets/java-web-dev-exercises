@@ -1,0 +1,62 @@
+    //TODO: make a program where you test yourself on key words and concepts from each unit chapter
+
+    assertEquals(expected, actual, optional_delta) =>  
+        Asserts that two values, expected and actual, are equal to each other (optionally, within a given range of difference)
+   
+    assertFalse(condition) =>	
+        Asserts that a given condition is false
+   
+    assertTrue(condition)  =>	
+        Asserts that a given condition is true
+   
+    assertNotNull(object)  =>	
+        Asserts that a given object is not null
+
+In Java, annotations (@annotation) are formalized bits of information about a program. 
+Annotations do not directly affect the code they annotate, but they do supply information to the compiler.
+
+Assert parameters are  “expected:”, “actual:”, and “delta:”. 
+    Delta is the value of the accepted variance.
+
+ @Before annotation can be used to set up some data or a condition that you want to have for every test in a given class
+
+JAR: 
+    - stands for Java ARchive 
+    - is a common Java file format used for bundling many classes and files together.
+
+Unit tests should be ARMeD.
+
+                     AAA 
+                     A    Relevant  
+                     A            MEaningful 
+                                             Deterministic
+                          E       E          E 
+                          L       A          T
+                          E       N          E 
+                          V       I          R 
+                          A       N          M 
+                          N       G          I 
+                          T       F          N
+                                  U          I
+                                  L          S
+                                             T 
+                                             I 
+                                             C   
+
+AAAs
+    The AAAs of unit testing refers to the pattern to follow when writing your unit tests.
+
+    - Arrange the variables your test requires
+    - Act on the methods your test requires
+    - Assert the anticipated comparison of the expected and actual values
+
+
+
+RELEVANT
+    Tests, as they are written, should be grouped by related class and function.
+
+MEANINGFUL
+    There is no need to test trivial code. For example, unless they contain additional functionality, there is no need to write tests for getters and setters. Your IntelliJ IDE offers code completion for these anyway
+
+DETERMINISTIC
+    Every, single, solitary time a test is run, it should produce the same outcome. A test that passes only most of the time is a worthless test.
