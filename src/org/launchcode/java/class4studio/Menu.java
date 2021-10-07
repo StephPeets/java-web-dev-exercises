@@ -1,7 +1,8 @@
-package org.launchcode.java.class4studio;
+package org.launchcode.java.studios.class4studio;
 
-import java.util.Date;
 import java.util.ArrayList;
+import java.util.Date;
+
 
 public class Menu {
 
