@@ -2,7 +2,7 @@ package exercises.class5.test;
 
 import static org.junit.Assert.*;
 import org.junit.*;
-import org.launchcode.java.demos.lsn5unittesting.main.Car;
+import exercises.class5.main.*;
 
 public class CarTest {
 
@@ -39,8 +39,6 @@ public class CarTest {
         test_car.drive(500);
         assertEquals(0, test_car.getGasTankLevel(), .001);
     }
-
-    // TODO: can't have more gas than tank size, expect an exception
 
     @Test(expected = IllegalArgumentException.class)
     public void testGasOverfillException() {
