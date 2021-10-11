@@ -1,6 +1,6 @@
-package exercises.class5.main;
+package exercises.class5.main5;
 
-public class Main {
+public class Main5 {
 
     public static void main(String[] args) {
         Car car = new Car("Toyota", "Prius", 10, 50);

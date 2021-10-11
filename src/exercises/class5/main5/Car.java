@@ -1,4 +1,4 @@
-package exercises.class5.main;
+package exercises.class5.main5;
 
 public class Car {
 

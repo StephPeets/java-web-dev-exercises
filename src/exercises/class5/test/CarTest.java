@@ -1,8 +1,10 @@
 package exercises.class5.test;
 
+import exercises.class5.main5.Car;
+import org.junit.Before;
+import org.junit.Test;
+
 import static org.junit.Assert.*;
-import org.junit.*;
-import exercises.class5.main.*;
 
 public class CarTest {
 

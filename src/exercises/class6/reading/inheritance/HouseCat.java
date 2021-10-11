@@ -1,0 +1,31 @@
+package exercises.class6.reading.inheritance;
+
+@SuppressWarnings("SpellCheckingInspection")
+public class HouseCat extends Cat {
+    private String name;
+    private String species = "Felis catus";
+
+    public HouseCat(String aName, double aWeight) {
+        super(aWeight);
+        name = aName;
+    }
+
+    public HouseCat(String aName) {
+        name = aName;
+    }
+
+    public boolean isSatisfied() {
+        return !isHungry() && !isTired();
+    }
+
+    public String noise() {
+        if (isSatisfied()) {
+            return "Hello, my name is " + name + "!";
+        } else {
+            return "Meeeeeeooooowww!";
+        }
+    }
+    public String purr() {
+        return "I'm a HouseCat";
+    }
+}
