@@ -22,12 +22,12 @@ public class CarTest {
 
     @Test
     public void assertFalseTestInitialGasTank() {
-        assertFalse(test_car.getGasTankLevel() == 0);
+        assertNotEquals(0, test_car.getGasTankLevel(), 0.0);
     }
 
     @Test
     public void assertTrueTestInitialGasTank() {
-        assertTrue(test_car.getGasTankLevel() == test_car.getGasTankSize());
+        assertEquals(test_car.getGasTankLevel(), test_car.getGasTankSize(), 0.0);
     }
 
     @Test

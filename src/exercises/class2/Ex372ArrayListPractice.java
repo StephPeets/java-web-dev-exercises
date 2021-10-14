@@ -50,7 +50,7 @@ public class Ex372ArrayListPractice {
     String practiceString = exercises.class2.Ex3713SplitArray.saucy;
 
     String splitStr[] = practiceString.split(" ");
-    ArrayList<String> stringToAL = new ArrayList<String>(Arrays.asList(splitStr));
+    ArrayList<String> stringToAL = new ArrayList<>(Arrays.asList(splitStr));
     
     System.out.print(stringToAL);
     System.out.print(userPicksLetters(stringToAL));

@@ -4,6 +4,7 @@ import exercises.class6.reading.inheritance.HouseCat;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class TestInheritance {
 
@@ -22,6 +23,6 @@ public class TestInheritance {
     @Test
     public void inheritsSuperHungryMethod() {
         HouseCat keyboardCat = new HouseCat("Keyboard Cat", 7);
-        assertEquals(false, keyboardCat.isHungry());
+        assertFalse(keyboardCat.isHungry());
     }
 }
